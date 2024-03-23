@@ -6,16 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "variables": [
-      {
-        "name": "clientId",
-        "value": "''"
-      },
-      {
-        "name": "redirectUrl",
-        "value": "''"
-      }
-    ],
+    "variables": [],
     "userPermissions": []
   },
   "id": "ExchangeToken_auth",

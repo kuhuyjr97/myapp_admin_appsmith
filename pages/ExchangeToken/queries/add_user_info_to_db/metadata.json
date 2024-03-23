@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO public.\"user_tokens\" (email, token)\nVALUES ( '{{this.params.email}}','{{this.params.token}}');",
+      "body": "INSERT INTO public.\"user_tokens\" (user_id, token)\nVALUES ( '{{this.params.email}}','{{this.params.token}}');",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

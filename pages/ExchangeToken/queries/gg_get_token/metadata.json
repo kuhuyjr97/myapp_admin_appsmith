@@ -31,7 +31,7 @@
       "bodyFormData": [
         {
           "key": "redirect_uri",
-          "value": "{{this.params.redirectUrl}}"
+          "value": "https://app.appsmith.com/app/untitled-application-1/exchangetoken-65feb03501a5d95cc78a38c6?branch=staging"
         },
         {
           "key": "code",
@@ -57,24 +57,20 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "bodyFormData[1].value"
-      },
-      {
         "key": "headers[1].value"
       },
       {
         "key": "headers[0].value"
       },
       {
-        "key": "bodyFormData[0].value"
+        "key": "bodyFormData[1].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.URL.queryParams.code",
-      "this.params.redirectUrl"
+      "appsmith.URL.queryParams.code"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

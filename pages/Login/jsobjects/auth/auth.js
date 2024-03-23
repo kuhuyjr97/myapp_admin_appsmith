@@ -1,9 +1,9 @@
 export default {
 
 	async loginChooseAccount() {
-	
-		const clientId = appsmith.store.DBVariables.clientId;
-		const redirectUrl = appsmith.store.DBVariables.redirectUrl;
+
+		const clientId = '1048593421849-fj7f1l3pfoq3h2gcl312v1n149fgp1b7.apps.googleusercontent.com';
+		const redirectUrl = 'https://app.appsmith.com/app/untitled-application-1/exchangetoken-65feb03501a5d95cc78a38c6?branch=staging';
 
 		await get_google_pem_cert.run();
 		const googlePemCertificateData = get_google_pem_cert.data;

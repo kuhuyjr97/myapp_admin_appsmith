@@ -1,55 +1,29 @@
 export default {
-	clientId: '',
-	redirectUrl: '',
-
-	// getDBValueByKey(dbVariables, keyName) {
-	// const item = dbVariables.find(item => item.key === keyName);
-	// return item ? item.value : null;
-	// },
-	// async getDBVariables() {
-	// await get_variables.run();
-	// let dbVariables = get_variables.data;
-	// this.clientId = this.getDBValueByKey(dbVariables, "clientId");
-	// this.redirectUrl = this.getDBValueByKey(dbVariables, "redirectUrl");
-	// },
-	// async getEnvInfo() {
-	// try {
-	// await this.getDBVariables();
-	// } catch(error) {
-	// // showAlert(message.Auth.BE_GET_INFO_FAILURE, 'error');
-	// return false;	
-	// }
-	// },
 
 	async startUp () {
 		const tokenExist = appsmith.store.token;
 
 		if (tokenExist) {
-			return await navigateTo("申込");
+			return await navigateTo("Home");
 		}
 
 		const code = appsmith.URL.queryParams.code;
 		if (!code) {
-			return await navigateTo("ログイン");
+			return await navigateTo("Login");
 		}
 
 		try {
 			await this.exchangeCodeToToken();
-			return await navigateTo("申込");
+			return await navigateTo("Home");
 		} catch(error) {
-			// console.log(error);
-			await navigateTo("ログイン");
+			await navigateTo("Login");
 		}
 	},
 
 	exchangeCodeToToken: async () => {
 		// await this.getEnvInfo();
-		const redirectUrl = appsmith.store.DBVariables.redirectUrl;
 		try {
-			const tokenInfo = await gg_get_token.run({redirectUrl});
-			// console.log('----tokenInfo: '+tokenInfo);
-			// console.log(tokenInfo);
-			//store token and user to appsmith local
+			const tokenInfo = await gg_get_token.run();
 			await storeValue('token', tokenInfo);
 			await this.saveUserToLocal(tokenInfo);
 			await this.saveTokenToDb(tokenInfo);
@@ -68,9 +42,8 @@ export default {
 	saveTokenToDb: async (tokenInfo) => {
 		const idToken = tokenInfo.id_token;
 		const email = appsmith.store.user['email'];
-		const site_code = 'gtn_admin';
 		try {
-			await add_user_info_to_db.run({email, site_code, token: idToken});
+			await add_user_info_to_db.run({email, token: idToken});
 		} catch (error) {
 			// console.error("failed to save token to db");
 			throw error;
