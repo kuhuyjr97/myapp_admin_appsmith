@@ -1,0 +1,80 @@
+{
+    "boxShadow": "none",
+    "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a7b19dc8b31d68fcff57f1d2c0084a18.svg",
+    "labelText": "Tài khoản",
+    "topRow": 0,
+    "labelWidth": "13",
+    "type": "SINGLE_SELECT_TREE_WIDGET",
+    "defaultOptionValue": "BLUE",
+    "animateLoading": true,
+    "leftColumn": 2,
+    "dynamicBindingPathList": [
+        {"key": "accentColor"},
+        {"key": "borderRadius"}
+    ],
+    "options": [
+        {
+            "children": [
+                {
+                    "label": "Dark Blue",
+                    "value": "DARK BLUE"
+                },
+                {
+                    "label": "Light Blue",
+                    "value": "LIGHT BLUE"
+                }
+            ],
+            "label": "Blue",
+            "value": "BLUE"
+        },
+        {
+            "label": "Green",
+            "value": "GREEN"
+        },
+        {
+            "label": "Red",
+            "value": "RED"
+        }
+    ],
+    "placeholderText": "Select option",
+    "isDisabled": false,
+    "isRequired": false,
+    "dynamicHeight": "FIXED",
+    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+    "isVisible": true,
+    "version": 1,
+    "expandAll": false,
+    "tags": ["Select"],
+    "isLoading": false,
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "needsErrorInfo": false,
+    "mobileBottomRow": 7,
+    "widgetName": "account_select",
+    "displayName": "TreeSelect",
+    "searchTags": [
+        "dropdown",
+        "singleselecttree"
+    ],
+    "bottomRow": 4,
+    "parentRowSpace": 10,
+    "hideCard": false,
+    "mobileRightColumn": 29,
+    "parentColumnSpace": 6.53125,
+    "dynamicTriggerPathList": [],
+    "labelPosition": "Left",
+    "key": "vr09fpo9e7",
+    "labelTextSize": "0.875rem",
+    "isDeprecated": false,
+    "rightColumn": 62,
+    "widgetId": "5kh24gf7gu",
+    "minWidth": 450,
+    "parentId": "yb67loix13",
+    "labelAlignment": "left",
+    "renderMode": "CANVAS",
+    "mobileTopRow": 0,
+    "responsiveBehavior": "fill",
+    "mobileLeftColumn": 9,
+    "maxDynamicHeight": 9000,
+    "allowClear": false,
+    "minDynamicHeight": 4
+}

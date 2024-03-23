@@ -16,7 +16,7 @@
     "displayName": "Menu button",
     "iconSVG": "/static/media/icon.631848e88e7a3db05f6015f22835e81b.svg",
     "topRow": 1,
-    "bottomRow": 5,
+    "bottomRow": 6,
     "parentRowSpace": 10,
     "type": "MENU_BUTTON_WIDGET",
     "hideCard": false,
@@ -26,7 +26,7 @@
         {"key": "menuItems.menuItem1.onClick"},
         {"key": "menuItems.menuItemduxese0ub3.onClick"}
     ],
-    "leftColumn": 35,
+    "leftColumn": 29,
     "dynamicBindingPathList": [
         {"key": "menuColor"},
         {"key": "borderRadius"},
