@@ -1,0 +1,2 @@
+SELECT DISTINCT agency_id
+FROM public.billings;
