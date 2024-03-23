@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "auth",
+    "pageId": "ExchangeToken",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "clientId",
+        "value": "''"
+      },
+      {
+        "name": "redirectUrl",
+        "value": "''"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "ExchangeToken_auth",
+  "deleted": false,
+  "gitSyncId": "65feb01801a5d95cc78a38c0_65feb03b01a5d95cc78a38cf"
+}
