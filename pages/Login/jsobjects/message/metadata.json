@@ -1,0 +1,20 @@
+{
+  "unpublishedCollection": {
+    "name": "message",
+    "pageId": "Login",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "Auth",
+        "value": "{\n  BE_GET_INFO_FAILURE: 'Can not get enviroinment info. Please try again.'\n}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Login_message",
+  "deleted": false,
+  "gitSyncId": "65feb01801a5d95cc78a38c0_65feb02f0f78b86aa2b4a55a"
+}

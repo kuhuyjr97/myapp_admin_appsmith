@@ -1,7 +1,7 @@
 {
   "pages": [
     {
-      "id": "Logina",
+      "id": "Login",
       "isDefault": true
     },
     {
@@ -9,7 +9,7 @@
       "isDefault": false
     },
     {
-      "id": "Homea",
+      "id": "Home",
       "isDefault": false
     }
   ],
