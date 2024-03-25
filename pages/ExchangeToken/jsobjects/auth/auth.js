@@ -9,7 +9,7 @@ export default {
 			await gg_get_token.run()
 			const tokenInfo =await gg_get_token.data
 			const idToken = tokenInfo.id_token;
-			const decodedToken = await jsonwebtoken.decode(idToken);
+			const decodedToken = await jsonwebtoken.decode(tokenInfo);
 			const email = decodedToken.email
 			await check_email_exist.run({email}).catch((error)=>{'email'+email+error,'error'})
 
