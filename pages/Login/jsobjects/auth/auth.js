@@ -5,9 +5,9 @@ export default {
 		const clientId = '1048593421849-fj7f1l3pfoq3h2gcl312v1n149fgp1b7.apps.googleusercontent.com';
 		const redirectUrl = 'https://app.appsmith.com/app/mini-app/exchangetoken-65feb03501a5d95cc78a38c6?branch=staging'
 
-		await get_google_pem_cert.run();
-		const googlePemCertificateData = get_google_pem_cert.data;
-		await storeValue("googlePemCertificate", googlePemCertificateData);
+		// await get_google_pem_cert.run();
+		// const googlePemCertificateData = get_google_pem_cert.data;
+		// await storeValue("googlePemCertificate", googlePemCertificateData);
 
 		let url =
 				"https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?response_type=code&client_id=" +

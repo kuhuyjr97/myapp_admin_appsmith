@@ -6,6 +6,7 @@ export default {
 		// // return await navigateTo("Home");
 		// }
 		try{
+			await	storeValue('start',1)
 			await gg_get_token.run()
 			const tokenInfo =await gg_get_token.data
 			const idToken = tokenInfo.id_token;
@@ -20,6 +21,8 @@ export default {
 			// }
 
 			await storeValue('token', idToken);
+			await storeValue('end',w)
+
 			// await storeValue('user', decodedToken);
 			// await add_token_to_db.run({id, idToken});
 
