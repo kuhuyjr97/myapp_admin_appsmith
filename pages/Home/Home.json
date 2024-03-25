@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 800,
+          "bottomRow": 680,
           "containerStyle": "none",
           "snapRows": 79,
           "parentRowSpace": 1,
@@ -33,6 +33,17 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_helper.ACCOUNT_TYPE",
+              "name": "helper.ACCOUNT_TYPE",
+              "collectionId": "Home_helper",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  return [{\n    \"name\": \"Gmail\",\n    \"code\": 0\n  }, {\n    \"name\": \"Company\",\n    \"code\": 1\n  }, {\n    \"name\": \"Indentity\",\n    \"code\": 2\n  }, {\n    \"name\": \"Icloud\",\n    \"code\": 3\n  }, {\n    \"name\": \"Camera\",\n    \"code\": 4\n  }, {\n    \"name\": \"Microsoft\",\n    \"code\": 5\n  }, {\n    \"name\": \"Samsung\",\n    \"code\": 6\n  }, {\n    \"name\": \"Steam\",\n    \"code\": 7\n  }, {\n    \"name\": \"Social\",\n    \"code\": 8\n  }, {\n    \"name\": \"Bank\",\n    \"code\": 9\n  }];\n}"
+              ],
               "timeoutInMillisecond": 10000
             }
           ],

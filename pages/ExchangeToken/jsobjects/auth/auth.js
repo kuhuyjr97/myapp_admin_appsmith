@@ -18,7 +18,7 @@ export default {
 			const id = check_email_exist.data[0].id	
 			if (check_email_exist.data.length === 0 ){
 				await clearStore()
-				return await navigateTo("Home");
+				return await navigateTo("Login");
 			}
 
 			await storeValue('token', tokenInfo);

@@ -71,7 +71,4 @@ export default {
 		}
 	},
 
-	test1(){
-		showAlert('asdasdasdasdasdsdasdsd111 sds'+'\n 222asdasdsadsadsda', 'error')
-	},
 };

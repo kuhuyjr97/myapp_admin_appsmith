@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "test1",
-    "fullyQualifiedName": "auth.test1",
+    "name": "ACCOUNT_TYPE",
+    "fullyQualifiedName": "helper.ACCOUNT_TYPE",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "Home",
-    "collectionId": "Home_auth",
+    "collectionId": "Home_helper",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -22,7 +22,7 @@
       "selfReferencingDataPaths": [],
       "jsArguments": []
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,9 +35,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-03-23T15:30:17Z"
+    "createdAt": "2024-03-24T14:28:25Z"
   },
-  "id": "Home_auth.test1",
+  "id": "Home_helper.ACCOUNT_TYPE",
   "deleted": false,
-  "gitSyncId": "65fed3008a180405eae453fa_65fef589c7fef247f42d5912"
+  "gitSyncId": "65fed3008a180405eae453fa_660038898b296f7fa96eb825"
 }

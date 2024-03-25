@@ -1,12 +1,12 @@
 {
     "boxShadow": "none",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.f2c34197dbcf03595098986de898928f.svg",
-    "topRow": 11,
+    "topRow": 13,
     "labelWidth": "8",
     "type": "INPUT_WIDGET_V2",
     "animateLoading": true,
     "resetOnSubmit": true,
-    "leftColumn": 3,
+    "leftColumn": 2,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
         {"key": "borderRadius"}
@@ -36,7 +36,7 @@
         "number",
         "textarea"
     ],
-    "bottomRow": 16,
+    "bottomRow": 18,
     "parentRowSpace": 10,
     "autoFocus": false,
     "hideCard": false,
@@ -47,7 +47,7 @@
     "key": "o7oxmq7umq",
     "labelTextSize": "0.875rem",
     "isDeprecated": false,
-    "rightColumn": 60,
+    "rightColumn": 61,
     "widgetId": "bh65qjrjpv",
     "minWidth": 450,
     "label": "Pass",
