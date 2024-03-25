@@ -27,10 +27,8 @@ export default {
 			await navigateTo("Home");
 		}catch(error){
 			showAlert('You re not allow to login this page','error')
+			navigateTo("Login");
 		}
-
-
-
 	},
 
 
