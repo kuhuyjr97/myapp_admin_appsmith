@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Login",
-    "slug": "login",
+    "name": "Logina",
+    "slug": "logina",
     "layouts": [
       {
         "viewMode": false,
@@ -29,7 +29,7 @@
         "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Login",
+        "id": "Logina",
         "deleted": false,
         "policies": [],
         "userPermissions": []
