@@ -2,7 +2,6 @@ export default {
 
 	async startUp () {
 		const tokenExist = appsmith.store.token;
-		return tokenExist
 
 		if (tokenExist) {
 			return await navigateTo("Home");
