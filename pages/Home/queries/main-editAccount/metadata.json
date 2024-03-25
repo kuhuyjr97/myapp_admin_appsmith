@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "test",
-    "fullyQualifiedName": "main.test",
+    "name": "editAccount",
+    "fullyQualifiedName": "main.editAccount",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -35,9 +35,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-03-24T15:59:33Z"
+    "createdAt": "2024-03-25T05:25:26Z"
   },
-  "id": "Home_main.test",
+  "id": "Home_main.editAccount",
   "deleted": false,
-  "gitSyncId": "65fed3008a180405eae453fa_66004de58b296f7fa96eb8f5"
+  "gitSyncId": "65fed3008a180405eae453fa_66010ac6ab7bb14a6bdfba5a"
 }

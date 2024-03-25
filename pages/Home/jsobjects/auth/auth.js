@@ -5,6 +5,9 @@ export default {
 
 	},
 	async startUp () {
+		//run tuan tu
+		await helper.dataOfTreeSelect()
+
 		try{
 			const isTokenValid =	await this.isTokenValid()
 			if (!isTokenValid){ 

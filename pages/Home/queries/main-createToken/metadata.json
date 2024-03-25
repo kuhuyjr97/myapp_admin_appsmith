@@ -22,7 +22,7 @@
       "selfReferencingDataPaths": [],
       "jsArguments": [
         {
-          "name": "token"
+          "name": "name"
         }
       ]
     },
@@ -39,9 +39,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-03-24T15:10:22Z"
+    "createdAt": "2024-03-25T05:25:26Z"
   },
   "id": "Home_main.createToken",
   "deleted": false,
-  "gitSyncId": "65fed3008a180405eae453fa_6600425eab7bb14a6bdfb5b0"
+  "gitSyncId": "65fed3008a180405eae453fa_66010ac6ab7bb14a6bdfba52"
 }

@@ -1,2 +1,2 @@
-SELECT DISTINCT agency_id
-FROM public.billings;
+SELECT type, "user_name", note
+FROM public.information;

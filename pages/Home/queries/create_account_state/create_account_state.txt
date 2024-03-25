@@ -1,0 +1,2 @@
+INSERT INTO public."information_history" (information_id, state)
+VALUES ('{{this.params.id}}', '{{this.params.state}}') ;

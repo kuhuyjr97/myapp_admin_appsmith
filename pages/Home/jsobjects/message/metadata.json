@@ -9,11 +9,11 @@
     "variables": [
       {
         "name": "Success",
-        "value": "{\n  LOGOUT_SUCCESS: 'Đã đăng xuất thành công!'\n}"
+        "value": "{\n  LOGOUT_SUCCESS: 'Log out successfully!',\n  CREATE_ACCOUNT_OK: 'Create Account successfully!',\n  COPY_OK: 'Copy successfully'\n}"
       },
       {
         "name": "Error",
-        "value": "{\n  TOKEN_FAIL: 'Token bị hết hạn pem!',\n  TOKEN_NOT_EXIST: 'Token đã bị xóa'\n}"
+        "value": "{\n  TOKEN_FAIL: 'Token s PEM is expired',\n  TOKEN_NOT_EXIST: 'Token was deleted',\n  CREATE_ACCOUNT_MISSING: 'Account information is missing',\n  CREATE_ACC_ERROR: ' There is error when create account',\n  VIEW_ACC_NG: ' There is error when view account'\n}"
       }
     ],
     "userPermissions": []

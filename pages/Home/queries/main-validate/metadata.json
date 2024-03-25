@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "decodeToken",
-    "fullyQualifiedName": "main.decodeToken",
+    "name": "validate",
+    "fullyQualifiedName": "main.validate",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -20,11 +20,7 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "selfReferencingDataPaths": [],
-      "jsArguments": [
-        {
-          "name": "name"
-        }
-      ]
+      "jsArguments": []
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -41,7 +37,7 @@
     "userPermissions": [],
     "createdAt": "2024-03-25T05:25:26Z"
   },
-  "id": "Home_main.decodeToken",
+  "id": "Home_main.validate",
   "deleted": false,
-  "gitSyncId": "65fed3008a180405eae453fa_66010ac6ab7bb14a6bdfba5c"
+  "gitSyncId": "65fed3008a180405eae453fa_66010ac6ab7bb14a6bdfba53"
 }

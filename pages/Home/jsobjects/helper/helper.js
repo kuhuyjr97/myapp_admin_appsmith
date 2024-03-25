@@ -1,4 +1,30 @@
 export default {
+	dataOfTreeSelect : async ()=>{
+		let treeData = [];
+		let yearsMap = {};
+
+		const responseData= await get_information.run()
+
+		responseData.forEach(record => {
+			if (!yearsMap[record.type]) {
+				yearsMap[record.type] = {
+					label: record.type.toString(),
+					value: record.type.toString(),
+					children: []
+				};
+				treeData.push(yearsMap[record.type]);
+			}
+			yearsMap[record.type].children.push({
+				label: record.user_name,
+				value: record.user_name
+			});
+		});
+
+		return treeData;
+
+	},
+
+
 	ACCOUNT_TYPE () {
 		return 	[
 			{
@@ -42,6 +68,11 @@ export default {
 				"code": 9
 			}
 		]
+	},
+
+	copyToClipboard(string) {
+		copyToClipboard(string);
+		showAlert(message.Success.COPY_OK);
 	},
 
 }

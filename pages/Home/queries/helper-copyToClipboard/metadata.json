@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "decodeToken",
-    "fullyQualifiedName": "main.decodeToken",
+    "name": "copyToClipboard",
+    "fullyQualifiedName": "helper.copyToClipboard",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "Home",
-    "collectionId": "Home_main",
+    "collectionId": "Home_helper",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -22,7 +22,7 @@
       "selfReferencingDataPaths": [],
       "jsArguments": [
         {
-          "name": "name"
+          "name": "string"
         }
       ]
     },
@@ -39,9 +39,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-03-25T05:25:26Z"
+    "createdAt": "2024-03-25T05:16:22Z"
   },
-  "id": "Home_main.decodeToken",
+  "id": "Home_helper.copyToClipboard",
   "deleted": false,
-  "gitSyncId": "65fed3008a180405eae453fa_66010ac6ab7bb14a6bdfba5c"
+  "gitSyncId": "65fed3008a180405eae453fa_660108a6f8d8d4165e68906e"
 }

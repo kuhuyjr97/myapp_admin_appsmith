@@ -13,7 +13,7 @@
         {"key": "borderRadius"},
         {"key": "options"}
     ],
-    "options": "{{helper.ACCOUNT_TYPE.data}}",
+    "options": "{{helper.dataOfTreeSelect.data}}",
     "placeholderText": "Select option",
     "isDisabled": false,
     "isRequired": false,

@@ -1,4 +1,0 @@
-SELECT id, name FROM public.agencies
-UNION ALL
-SELECT 0 AS id, 'All' AS name
-ORDER BY id ASC;

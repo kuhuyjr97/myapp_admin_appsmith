@@ -2,8 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "get_information",
-    "fullyQualifiedName": "get_agency",
+    "name": "create_account",
     "datasource": {
       "name": "main_db",
       "pluginId": "postgres-plugin",
@@ -19,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT type, \"user_name\", note\nFROM public.information;\n",
+      "body": "INSERT INTO public.\"information\" (type,user_name, hash, note)\nVALUES ('{{type_select.selectedOptionLabel}}', '{{user_input.text}}', '{{this.params.text}}', '{{note_input.text}}') RETURNING id;\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -28,18 +27,27 @@
       ]
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "note_input.text",
+      "this.params.text",
+      "type_select.selectedOptionLabel",
+      "user_input.text"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-03-23T14:56:34Z"
+    "createdAt": "2024-03-25T03:27:19Z"
   },
-  "id": "Home_get_agency",
+  "id": "Home_create_account",
   "deleted": false,
-  "gitSyncId": "65fed3008a180405eae453fa_65feeda20f78b86aa2b4a6ee"
+  "gitSyncId": "65fed3008a180405eae453fa_6600ef1777a3226339563451"
 }

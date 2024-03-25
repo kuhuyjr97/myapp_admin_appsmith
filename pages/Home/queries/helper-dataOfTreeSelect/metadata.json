@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "decodeToken",
-    "fullyQualifiedName": "main.decodeToken",
+    "name": "dataOfTreeSelect",
+    "fullyQualifiedName": "helper.dataOfTreeSelect",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,19 +14,15 @@
       "userPermissions": []
     },
     "pageId": "Home",
-    "collectionId": "Home_main",
+    "collectionId": "Home_helper",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "selfReferencingDataPaths": [],
-      "jsArguments": [
-        {
-          "name": "name"
-        }
-      ]
+      "jsArguments": []
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -39,9 +35,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-03-25T05:25:26Z"
+    "createdAt": "2024-03-25T05:03:38Z"
   },
-  "id": "Home_main.decodeToken",
+  "id": "Home_helper.dataOfTreeSelect",
   "deleted": false,
-  "gitSyncId": "65fed3008a180405eae453fa_66010ac6ab7bb14a6bdfba5c"
+  "gitSyncId": "65fed3008a180405eae453fa_660105aa4b59877d57fc25ad"
 }

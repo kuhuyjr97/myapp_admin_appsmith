@@ -1,0 +1,2 @@
+INSERT INTO public."information" (type,user_name, hash, note)
+VALUES ('{{type_select.selectedOptionLabel}}', '{{user_input.text}}', '{{this.params.text}}', '{{note_input.text}}') RETURNING id;

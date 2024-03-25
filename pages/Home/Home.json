@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 680,
+          "bottomRow": 610,
           "containerStyle": "none",
           "snapRows": 79,
           "parentRowSpace": 1,
@@ -45,6 +45,17 @@
                 "function () {\n  return [{\n    \"name\": \"Gmail\",\n    \"code\": 0\n  }, {\n    \"name\": \"Company\",\n    \"code\": 1\n  }, {\n    \"name\": \"Indentity\",\n    \"code\": 2\n  }, {\n    \"name\": \"Icloud\",\n    \"code\": 3\n  }, {\n    \"name\": \"Camera\",\n    \"code\": 4\n  }, {\n    \"name\": \"Microsoft\",\n    \"code\": 5\n  }, {\n    \"name\": \"Samsung\",\n    \"code\": 6\n  }, {\n    \"name\": \"Steam\",\n    \"code\": 7\n  }, {\n    \"name\": \"Social\",\n    \"code\": 8\n  }, {\n    \"name\": \"Bank\",\n    \"code\": 9\n  }];\n}"
               ],
               "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_helper.dataOfTreeSelect",
+              "name": "helper.dataOfTreeSelect",
+              "collectionId": "Home_helper",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  let treeData = [];\n  let yearsMap = {};\n  const responseData = await get_information.run();\n  responseData.forEach(record => {\n    if (!yearsMap[record.type]) {\n      yearsMap[record.type] = {\n        label: record.type.toString(),\n        value: record.type.toString(),\n        children: []\n      };\n      treeData.push(yearsMap[record.type]);\n    }\n    yearsMap[record.type].children.push({\n      label: record.user_name,\n      value: record.user_name\n    });\n  });\n  return treeData;\n}"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ],
           [
@@ -55,7 +66,18 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async function () {\n  try {\n    const isTokenValid = await auth.isTokenValid();\n    if (!isTokenValid) {\n      showAlert(message.Error.LOGOUT_SUCCESS, 'error');\n    }\n  } catch (error) {\n    showAlert('Error: ' + error.message, 'error');\n  }\n}"
+                "async function () {\n  await helper.dataOfTreeSelect();\n  try {\n    const isTokenValid = await auth.isTokenValid();\n    if (!isTokenValid) {\n      showAlert(message.Error.LOGOUT_SUCCESS, 'error');\n    }\n  } catch (error) {\n    showAlert('Error: ' + error.message, 'error');\n  }\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_main.getText",
+              "name": "main.getText",
+              "collectionId": "Home_main",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function (text) {\n  const decodeToken = main.decodeToken(text);\n  const token = decodeToken.name.split('').reverse().join('');\n  const nhat = token.slice(-14, -10);\n  const nhi = token.slice(26, 29);\n  const tam = token.slice(61, -14);\n  const okText = nhat + nhi + tam;\n  return okText;\n}"
               ],
               "timeoutInMillisecond": 10000
             }
