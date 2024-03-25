@@ -54,7 +54,7 @@
         "apiContentType": "application/x-www-form-urlencoded"
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "headers[1].value"
