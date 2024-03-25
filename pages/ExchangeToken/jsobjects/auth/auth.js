@@ -2,6 +2,7 @@ export default {
 
 	async startUp () {
 		const tokenExist = appsmith.store.token;
+		return tokenExist
 
 		if (tokenExist) {
 			return await navigateTo("Home");
@@ -28,7 +29,7 @@ export default {
 			showAlert('Check ok','success')
 			await navigateTo("Home");
 		} catch(error) {
-			showAlert(error,'error')
+			showAlert('You are not allow to login this page','error')
 			await navigateTo("Login");
 		}
 	},
