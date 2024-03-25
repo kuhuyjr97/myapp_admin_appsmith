@@ -1,0 +1,4 @@
+UPDATE public.information
+SET hash = '{{this.params.text}}',
+    note = '{{note_input.text}}'
+WHERE id = {{this.params.id}};

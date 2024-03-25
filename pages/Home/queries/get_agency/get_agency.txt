@@ -1,2 +1,2 @@
-SELECT type, "user_name", note
+SELECT id, type, "user_name", note
 FROM public.information;

@@ -33,10 +33,14 @@ export default {
 		const password = pass_input.text
 		const createdText =await this.createText(password)
 		try{
-			await create_account.run({text:createdText})
-			const createdId = create_account.data[0].id
+			const data = get_information.data
+			const filterData = data.find(item => item.type === type_select.selectedOptionLabel && item.user_name === user_input.text)
+			const currentId =filterData.id
 
-			await create_account_state.run({id:createdId, state:"create"})
+			await edit_information.run({text:createdText,id:currentId})
+			await create_account_state.run({id:currentId, state:"edit"})
+
+			resetWidget('change_container')
 			showAlert(message.Success.CREATE_ACCOUNT_OK, 'success')
 		}catch(error){
 			showAlert(message.Error.CREATE_ACC_ERROR+error, 'error')
