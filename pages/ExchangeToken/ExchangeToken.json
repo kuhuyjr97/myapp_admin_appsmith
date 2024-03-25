@@ -28,18 +28,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "ExchangeToken_gg_get_token",
-              "name": "gg_get_token",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.code"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "ExchangeToken_auth.startUp",
               "name": "auth.startUp",
               "collectionId": "ExchangeToken_auth",
