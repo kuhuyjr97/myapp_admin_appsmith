@@ -38,6 +38,19 @@
           ],
           [
             {
+              "id": "Home_helper.dataOfTreeSelect",
+              "name": "helper.dataOfTreeSelect",
+              "collectionId": "Home_helper",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  let treeData = [];\n  let yearsMap = {};\n  const responseData = await get_information.run();\n  responseData.forEach(record => {\n    if (!yearsMap[record.type]) {\n      yearsMap[record.type] = {\n        label: record.type.toString(),\n        value: record.type.toString(),\n        children: []\n      };\n      treeData.push(yearsMap[record.type]);\n    }\n    yearsMap[record.type].children.push({\n      label: record.user_name,\n      value: record.user_name\n    });\n  });\n  return treeData;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Home_auth.startUp",
               "name": "auth.startUp",
               "collectionId": "Home_auth",

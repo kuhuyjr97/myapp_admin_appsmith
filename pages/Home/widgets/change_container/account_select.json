@@ -5,13 +5,14 @@
     "topRow": 0,
     "labelWidth": "13",
     "type": "SINGLE_SELECT_TREE_WIDGET",
-    "defaultOptionValue": "",
+    "defaultOptionValue": "{{helper.dataOfTreeSelect.data[0].label}}",
     "animateLoading": true,
     "leftColumn": 1,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
         {"key": "borderRadius"},
-        {"key": "options"}
+        {"key": "options"},
+        {"key": "defaultOptionValue"}
     ],
     "options": "{{helper.dataOfTreeSelect.data}}",
     "placeholderText": "Select option",
