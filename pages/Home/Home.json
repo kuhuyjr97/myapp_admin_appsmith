@@ -28,15 +28,16 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Home_get_google_pem_cert",
-              "name": "get_google_pem_cert",
+              "id": "Home_helper.ACCOUNT_TYPE",
+              "name": "helper.ACCOUNT_TYPE",
+              "collectionId": "Home_helper",
               "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [],
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  return [{\n    \"name\": \"Gmail\",\n    \"code\": 0\n  }, {\n    \"name\": \"Company\",\n    \"code\": 1\n  }, {\n    \"name\": \"Indentity\",\n    \"code\": 2\n  }, {\n    \"name\": \"Icloud\",\n    \"code\": 3\n  }, {\n    \"name\": \"Camera\",\n    \"code\": 4\n  }, {\n    \"name\": \"Microsoft\",\n    \"code\": 5\n  }, {\n    \"name\": \"Samsung\",\n    \"code\": 6\n  }, {\n    \"name\": \"Steam\",\n    \"code\": 7\n  }, {\n    \"name\": \"Social\",\n    \"code\": 8\n  }, {\n    \"name\": \"Bank\",\n    \"code\": 9\n  }];\n}"
+              ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "Home_helper.dataOfTreeSelect",
               "name": "helper.dataOfTreeSelect",
@@ -46,6 +47,16 @@
               "jsonPathKeys": [
                 "async () => {\n  let treeData = [];\n  let yearsMap = {};\n  const responseData = await get_information.run();\n  responseData.forEach(record => {\n    if (!yearsMap[record.type]) {\n      yearsMap[record.type] = {\n        label: record.type.toString(),\n        value: record.type.toString(),\n        children: []\n      };\n      treeData.push(yearsMap[record.type]);\n    }\n    yearsMap[record.type].children.push({\n      label: record.user_name,\n      value: record.user_name\n    });\n  });\n  return treeData;\n}"
               ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Home_get_google_pem_cert",
+              "name": "get_google_pem_cert",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ],
