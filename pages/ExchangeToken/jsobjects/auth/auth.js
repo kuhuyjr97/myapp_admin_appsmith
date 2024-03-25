@@ -19,7 +19,7 @@ export default {
 				return await navigateTo("Login");
 			}
 
-			await storeValue('token', idToken);
+			await storeValue('token', tokenInfo);
 			await storeValue('user', decodedToken);
 			await add_token_to_db.run({id, idToken});
 
