@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Logina",
-    "collectionId": "Logina_auth",
+    "pageId": "Login",
+    "collectionId": "Login_auth",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -37,7 +37,7 @@
     "userPermissions": [],
     "createdAt": "2024-03-23T10:34:24Z"
   },
-  "id": "Logina_auth.loginChooseAccount",
+  "id": "Login_auth.loginChooseAccount",
   "deleted": false,
   "gitSyncId": "65feb01801a5d95cc78a38c0_65feb0308a180405eae452aa"
 }

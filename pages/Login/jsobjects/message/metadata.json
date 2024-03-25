@@ -1,7 +1,7 @@
 {
   "unpublishedCollection": {
     "name": "message",
-    "pageId": "Logina",
+    "pageId": "Login",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -14,7 +14,7 @@
     ],
     "userPermissions": []
   },
-  "id": "Logina_message",
+  "id": "Login_message",
   "deleted": false,
   "gitSyncId": "65feb01801a5d95cc78a38c0_65feb02f0f78b86aa2b4a55a"
 }
