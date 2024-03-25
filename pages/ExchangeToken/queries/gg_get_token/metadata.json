@@ -31,7 +31,7 @@
       "bodyFormData": [
         {
           "key": "redirect_uri",
-          "value": "https://app.appsmith.com/app/untitled-application-1/exchangetoken-65feb03501a5d95cc78a38c6?branch=staging"
+          "value": "https://app.appsmith.com/app/mini-app/exchangetoken-65feb03501a5d95cc78a38c6?branch=staging"
         },
         {
           "key": "code",
