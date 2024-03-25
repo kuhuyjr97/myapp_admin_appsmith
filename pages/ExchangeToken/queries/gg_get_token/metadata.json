@@ -35,7 +35,7 @@
         },
         {
           "key": "code",
-          "value": "{{appsmith.URL.queryParams.code}}"
+          "value": "4/0AeaYSHD-26ieg72N00BOZCsd6L5u0ssk04Bs9n4Yd4IOia42bm63AYDpHxEtMDtE1aYwcQ"
         },
         {
           "key": "grant_type",
@@ -61,17 +61,12 @@
       },
       {
         "key": "headers[0].value"
-      },
-      {
-        "key": "bodyFormData[1].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "appsmith.URL.queryParams.code"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
