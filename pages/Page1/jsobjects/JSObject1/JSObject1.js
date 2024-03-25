@@ -1,6 +1,9 @@
 export default {
 
 	async myFun2 () {
-		await get_information.run()
+		storeValue('test','asdad')
+		const data =await get_information.run()
+		storeValue('test1',data)
+
 	}
 }
