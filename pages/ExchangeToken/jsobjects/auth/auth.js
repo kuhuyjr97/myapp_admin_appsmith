@@ -1,10 +1,10 @@
 export default {
 
 	async startUp () {
-		const tokenExist = appsmith.store.token;
-		if (tokenExist) {
-			// return await navigateTo("Home");
-		}
+		// const tokenExist = appsmith.store.token;
+		// if (tokenExist) {
+		// // return await navigateTo("Home");
+		// }
 		try{
 			await gg_get_token.run()
 			const tokenInfo =await gg_get_token.data
