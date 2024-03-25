@@ -28,23 +28,25 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "ExchangeToken_auth.startUp",
-              "name": "auth.startUp",
-              "collectionId": "ExchangeToken_auth",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  const tokenExist = appsmith.store.token;\n  if (tokenExist) {\n    return await navigateTo(\"Home\");\n  }\n  try {\n    await gg_get_token.run();\n    const tokenInfo = await gg_get_token.data;\n    const idToken = tokenInfo.id_token;\n    const decodedToken = await jsonwebtoken.decode(tokenInfo);\n    const email = decodedToken.email;\n    await check_email_exist.run({\n      email\n    }).catch(error => {\n      ('email' + email + error, 'error');\n    });\n    const id = check_email_exist.data[0].id;\n    if (check_email_exist.data.length === 0) {\n      await clearStore();\n      return await navigateTo(\"Login\");\n    }\n    await storeValue('token', tokenInfo);\n    await storeValue('user', decodedToken);\n    await add_token_to_db.run({\n      id,\n      idToken\n    });\n    showAlert('Check ok', 'success');\n    await navigateTo(\"Home\");\n  } catch (error) {\n    showAlert('You re not allow to login this page', 'error');\n    navigateTo(\"Login\");\n  }\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "ExchangeToken_check_email_exist",
               "name": "check_email_exist",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
                 "this.params.email"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "ExchangeToken_auth.startUp",
+              "name": "auth.startUp",
+              "collectionId": "ExchangeToken_auth",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  const tokenExist = appsmith.store.token;\n  if (tokenExist) {\n    return await navigateTo(\"Home\");\n  }\n  try {\n    await gg_get_token.run();\n    const tokenInfo = await gg_get_token.data;\n    const idToken = tokenInfo.id_token;\n    const decodedToken = await jsonwebtoken.decode(idToken);\n    const email = decodedToken.email;\n    await check_email_exist.run({\n      email\n    }).catch(error => {\n      ('email' + email + error, 'error');\n    });\n    const id = check_email_exist.data[0].id;\n    if (check_email_exist.data.length === 0) {\n      await clearStore();\n      return await navigateTo(\"Login\");\n    }\n    await storeValue('token', tokenInfo);\n    await storeValue('user', decodedToken);\n    await add_token_to_db.run({\n      id,\n      idToken\n    });\n    showAlert('Check ok', 'success');\n    await navigateTo(\"Home\");\n  } catch (error) {\n    showAlert('You re not allow to login this page', 'error');\n    navigateTo(\"Login\");\n  }\n}"
               ],
               "timeoutInMillisecond": 10000
             }
