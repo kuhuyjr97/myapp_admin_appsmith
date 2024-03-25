@@ -9,11 +9,15 @@
       "isDefault": false
     },
     {
-      "id": "Home",
+      "id": "Homea",
       "isDefault": false
     },
     {
       "id": "Page1",
+      "isDefault": false
+    },
+    {
+      "id": "ExchangeToken Copy",
       "isDefault": false
     }
   ],

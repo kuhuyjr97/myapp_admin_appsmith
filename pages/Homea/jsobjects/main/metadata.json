@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "main",
+    "pageId": "Homea",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Homea_main",
+  "deleted": false,
+  "gitSyncId": "65fed3008a180405eae453fa_66010ab2ab7bb14a6bdfba4c"
+}

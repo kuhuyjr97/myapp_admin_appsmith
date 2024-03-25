@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "auth",
+    "pageId": "ExchangeToken Copy",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "ExchangeToken Copy_auth",
+  "deleted": false,
+  "gitSyncId": "65fed3008a180405eae453fa_66013a50de28ae028583695e"
+}
