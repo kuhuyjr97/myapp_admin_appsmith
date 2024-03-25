@@ -55,7 +55,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async function () {\n  try {\n    const isTokenValid = await auth.isTokenValid();\n    if (!isTokenValid) {\n      await auth.logout();\n      showAlert(message.Error.LOGOUT_SUCCESS, 'error');\n    }\n  } catch (error) {\n    showAlert('Error: ' + error.message, 'error');\n  }\n}"
+                "async function () {\n  try {\n    const isTokenValid = await auth.isTokenValid();\n    if (!isTokenValid) {\n      showAlert(message.Error.LOGOUT_SUCCESS, 'error');\n    }\n  } catch (error) {\n    showAlert('Error: ' + error.message, 'error');\n  }\n}"
               ],
               "timeoutInMillisecond": 10000
             }

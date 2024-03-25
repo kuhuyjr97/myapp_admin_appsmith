@@ -8,7 +8,7 @@ export default {
 		try{
 			const isTokenValid =	await this.isTokenValid()
 			if (!isTokenValid){ 
-				await this.logout()
+				// await this.logout()
 				showAlert(message.Error.LOGOUT_SUCCESS,'error')}
 		}catch(error){
 			showAlert('Error: '+error.message, 'error')
