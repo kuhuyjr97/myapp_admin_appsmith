@@ -30,6 +30,10 @@ export default {
 			navigateTo("Login");
 		}
 	},
+	async test () {
+		await get_information.run()
+	}
+
 
 
 

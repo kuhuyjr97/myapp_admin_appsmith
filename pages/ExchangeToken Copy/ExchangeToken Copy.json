@@ -28,21 +28,21 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "ExchangeToken Copy_auth.test",
+              "name": "auth.test",
+              "collectionId": "ExchangeToken Copy_auth",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  await get_information.run();\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "ExchangeToken Copy_get_agency",
               "name": "get_agency",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "ExchangeToken Copy_auth.startUp",
-              "name": "auth.startUp",
-              "collectionId": "ExchangeToken Copy_auth",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }

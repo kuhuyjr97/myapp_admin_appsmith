@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "startUp",
-    "fullyQualifiedName": "auth.startUp",
+    "name": "test",
+    "fullyQualifiedName": "auth.test",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "ExchangeToken",
-    "collectionId": "ExchangeToken_auth",
+    "pageId": "ExchangeToken Copy",
+    "collectionId": "ExchangeToken Copy_auth",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -35,9 +35,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-03-23T10:34:37Z"
+    "createdAt": "2024-03-25T08:53:30Z"
   },
-  "id": "ExchangeToken_auth.startUp",
+  "id": "ExchangeToken Copy_auth.test",
   "deleted": false,
-  "gitSyncId": "65feb01801a5d95cc78a38c0_65feb03d01a5d95cc78a38d2"
+  "gitSyncId": "65fed3008a180405eae453fa_66013b8aab7bb14a6bdfbba2"
 }
