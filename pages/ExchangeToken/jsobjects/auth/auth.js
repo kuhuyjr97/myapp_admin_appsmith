@@ -2,7 +2,6 @@ export default {
 
 	async startUp () {
 		const tokenExist = appsmith.store.token;
-
 		if (tokenExist) {
 			return await navigateTo("Home");
 		}
@@ -15,6 +14,7 @@ export default {
 			const decodedToken = await jsonwebtoken.decode(idToken);
 			const email = decodedToken.email
 			await check_email_exist.run({email})
+
 			const id = check_email_exist.data[0].id	
 			if (check_email_exist.data.length === 0 ){
 				await clearStore()
