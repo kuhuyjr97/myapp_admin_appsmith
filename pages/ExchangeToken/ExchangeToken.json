@@ -32,7 +32,9 @@
               "name": "gg_get_token",
               "confirmBeforeExecute": false,
               "pluginType": "API",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.code"
+              ],
               "timeoutInMillisecond": 10000
             }
           ],
@@ -56,7 +58,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async function () {\n  const tokenExist = appsmith.store.token;\n  if (tokenExist) {\n    return await navigateTo(\"Home\");\n  }\n  try {\n    await gg_get_token.run();\n    const tokenInfo = await gg_get_token.data;\n    const idToken = tokenInfo.id_token;\n    const decodedToken = await jsonwebtoken.decode(idToken);\n    const email = decodedToken.email;\n    await check_email_exist.run({\n      email\n    });\n    const id = check_email_exist.data[0].id;\n    if (check_email_exist.data.length === 0) {\n      await clearStore();\n    }\n    showAlert('Check ok', 'success');\n  } catch (error) {\n    showAlert('You are not allow to login this page', 'error');\n  }\n}"
+                "async function () {\n  const tokenExist = appsmith.store.token;\n  if (tokenExist) {}\n  try {\n    await gg_get_token.run();\n    const tokenInfo = await gg_get_token.data;\n    const idToken = tokenInfo.id_token;\n    const decodedToken = await jsonwebtoken.decode(idToken);\n    const email = decodedToken.email;\n    await check_email_exist.run({\n      email\n    }).catch(error => {\n      ('email' + email + error, 'error');\n    });\n    const id = check_email_exist.data[0].id;\n    if (check_email_exist.data.length === 0) {\n      await clearStore();\n    }\n    showAlert('Check ok', 'success');\n  } catch (error) {\n    showAlert('You are not allow to login this page', 'error');\n  }\n}"
               ],
               "timeoutInMillisecond": 10000
             }

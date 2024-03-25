@@ -3,7 +3,7 @@ export default {
 	async startUp () {
 		const tokenExist = appsmith.store.token;
 		if (tokenExist) {
-			return await navigateTo("Home");
+			// return await navigateTo("Home");
 		}
 
 		try {
@@ -13,7 +13,7 @@ export default {
 			const idToken = tokenInfo.id_token;
 			const decodedToken = await jsonwebtoken.decode(idToken);
 			const email = decodedToken.email
-			await check_email_exist.run({email})
+			await check_email_exist.run({email}).catch((error)=>{'email'+email+error,'error'})
 
 			const id = check_email_exist.data[0].id	
 			if (check_email_exist.data.length === 0 ){
