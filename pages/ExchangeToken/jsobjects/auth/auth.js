@@ -28,7 +28,7 @@ export default {
 			showAlert('Check ok','success')
 			// await navigateTo("Home");
 		} catch(error) {
-			showAlert('You are not allow to login this page','error')
+			showAlert('You are not allow to login this page'+error,'error')
 			// await navigateTo("Login");
 		}
 	},
